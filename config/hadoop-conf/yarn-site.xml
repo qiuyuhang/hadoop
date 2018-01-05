@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<configuration>
+<property>
+  <name>yarn.resourcemanager.ha.enabled</name>
+  <value>true</value>
+</property>
+    <property>
+      <name>yarn.resourcemanager.cluster-id</name>
+      <value>cluster</value>
+    </property>
+    <property>
+      <name>yarn.resourcemanager.ha.rm-ids</name>
+      <value>rm1,rm2,rm3</value>
+    </property>
+    <property>
+      <name>yarn.resourcemanager.hostname.rm1</name>
+      <value>namenode1</value>
+    </property>
+    <property>
+      <name>yarn.resourcemanager.hostname.rm2</name>
+      <value>namenode2</value>
+    </property>
+    <property>
+      <name>yarn.resourcemanager.hostname.rm3</name>
+      <value>namenode3</value>
+    </property>
+    <property>
+      <name>yarn.resourcemanager.webapp.address.rm1</name>
+      <value>namenode1:8088</value>
+    </property>
+    <property>
+      <name>yarn.resourcemanager.webapp.address.rm2</name>
+      <value>namenode2:8088</value>
+    </property>
+    <property>
+      <name>yarn.resourcemanager.webapp.address.rm3</name>
+      <value>namenode3:8088</value>
+    </property>
+    <property>
+      <name>yarn.resourcemanager.zk-address</name>
+      <value>zk1:2181,zk2:2181,zk3:2181</value>
+    </property>
+</configuration>

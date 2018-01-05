@@ -2794,7 +2794,7 @@
   </property>
   <property>
     <name>hive.zookeeper.quorum</name>
-    <value/>
+    <value>zk1,zk2,zk3</value>
     <description>
       List of ZooKeeper servers to talk to. This is needed for: 
       1. Read/write locks - when hive.lock.manager is set to 
@@ -3769,7 +3769,7 @@
   </property>
   <property>
     <name>hive.server2.support.dynamic.service.discovery</name>
-    <value>false</value>
+    <value>true</value>
     <description>Whether HiveServer2 supports dynamic service discovery for its clients. To support this, each instance of HiveServer2 currently uses ZooKeeper to register itself, when it is brought up. JDBC/ODBC clients should use the ZooKeeper ensemble: hive.zookeeper.quorum in their connection string.</description>
   </property>
   <property>
@@ -3800,7 +3800,7 @@
   </property>
   <property>
     <name>hive.server2.thrift.bind.host</name>
-    <value/>
+    <value>0.0.0.0</value>
     <description>Bind host on which to run the HiveServer2 Thrift service.</description>
   </property>
   <property>

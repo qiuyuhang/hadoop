@@ -11,9 +11,8 @@ RUN ssh-keygen -t rsa -f ~/.ssh/id_rsa -P '' && \
     cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys && \
     cat /tmp/id_rsa.pub >> ~/.ssh/authorized_keys
 
-RUN echo -e "password\npassword" | passwd
-
-RUN mkdir -p ~/hadoop/namenode && \ 
+RUN sh -c 'echo "password\npassword" | passwd' && \ 
+    mkdir -p ~/hadoop/namenode && \ 
     mkdir -p ~/hadoop/datanode && \
     mkdir -p ~/hadoop/zkdata && \
     mkdir -p ~/hadoop/zklog && \

@@ -11,7 +11,7 @@ do
 	echo "start namenode$i container..."
 	docker run -itd --net=hadoop \
                 -p ${i}22:22 \
-                -p ${i}0000:0000 \
+                -p ${i}0000:10000 \
                 -p ${i}8088:8088 \
                 -p ${i}9870:9870 \
                 --name namenode$i --hostname namenode$i qiuyuhang/hadoop &> /dev/null

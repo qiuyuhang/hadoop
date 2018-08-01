@@ -2,6 +2,7 @@
 
 # start hadoop container
 i=1
+
 while [ $i -lt 4 ]
 do
 	docker rm -f namenode$i &> /dev/null
